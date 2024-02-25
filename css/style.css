@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.animation {
+  background: #498da1;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  animation: animation 10s infinite reverse;
+}
+
+.plane {
+  width: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 30px;
+  right: 300px;
+  z-index: 999;
+  animation: planeanima 30s infinite reverse;
+}
+
+.sun {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  left: 200px;
+  animation: sun 20s infinite reverse;
+  transition: 1s;
+  box-shadow: 1px 1px 10px yellow;
+}
+
+ul li {
+  position: absolute;
+  animation: clouds 5s infinite reverse;
+}
+
+.cloud-1 {
+  width: 200px;
+  top: 20px;
+}
+.cloud-2 {
+  width: 20px;
+  top: 400px;
+  animation-delay: 0.5s;
+}
+.cloud-3 {
+  width: 90px;
+  top: 300px;
+  animation-delay: 1s;
+}
+.cloud-4 {
+  width: 100px;
+  top: 200px;
+  animation-delay: 2s;
+}
+.cloud-5 {
+  width: 40px;
+  top: 550px;
+  animation-delay: 1.1s;
+}
+.cloud-6 {
+  width: 140px;
+  top: 390px;
+  animation-delay: 3s;
+}
+
+
+@keyframes clouds {
+  to {
+    transform: translateX(-100%);
+  }
+
+  from {
+   transform: translateX(calc(100vw + 100%));;
+  }
+}
+
+@keyframes planeanima {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(20px,-20px);
+  }
+
+  75% {
+    transform: translate(-40px,0px);
+  }
+
+  100% {
+     transform: translate(0.0);
+  }
+}
+
+@keyframes animation {
+  to {
+    background: #498da1;
+  }
+  from {
+    background: #1d2f41;
+  }
+}
+
+@keyframes sun {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(0px,0px);
+  }
+
+  75% {
+    transform: translate(0px,620px);
+  }
+
+  100% {
+     transform: translate(0.0);
+  }
+}
+
